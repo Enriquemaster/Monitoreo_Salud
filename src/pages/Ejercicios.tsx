@@ -6,6 +6,9 @@ import { IonReactRouter } from '@ionic/react-router';
 import { Route } from 'react-router-dom';
 import './Home.css';
 import Menu from './Menu';
+import DeleteIcon from '@mui/icons-material/Delete';
+import LoginIcon from '@mui/icons-material/Login';
+import thumb_upIcon from '@mui/icons-material/';
 
 const Ejercicios: React.FC = () => {
   return (
@@ -18,13 +21,15 @@ const Ejercicios: React.FC = () => {
         <IonHeader>
           <IonToolbar>
             <IonMenuButton slot="start" className="custom-menu-button"  />
-            <IonTitle>Home</IonTitle>
+            <IonTitle>Registro de Ejercicios</IonTitle>
           </IonToolbar>
         </IonHeader>
 
         <IonContent id="main-content" className="ion-padding bg-gray-100 flex flex-col items-center justify-center h-auto w-full">
        
 
+        <DeleteIcon color="disabled"  sx={{ fontSize: 80 }} />
+        <LoginIcon color="disabled"  sx={{ fontSize: 80 }} />
      
           <h1 className="mt-4 text-4xl font-bold text-green-500">
             ¡Ejercicios!

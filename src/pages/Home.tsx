@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom';
 import HyperText from "@/components/ui/hyper-text";
 import RetroGrid from "@/components/ui/retro-grid"; 
 import Menu from './Menu'; 
+import DeleteIcon from '@mui/icons-material/Delete';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -45,6 +46,8 @@ const Home: React.FC = () => {
                 <p className="text-muted-foreground">Hourly rate continuously increases every few months.</p>
               </div>
             </div>
+
+
 
             <div className="col-span-1 bg-card p-4 rounded-lg shadow-md bg-[#d5d153]">
               <h3 className="text-xl font-bold">Distancia Recorrida</h3>
