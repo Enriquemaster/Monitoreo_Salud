@@ -1,0 +1,36 @@
+/* Cambia el color de las tres líneas del botón de menú a verde */
+.custom-menu-button {
+    --color: #dadada; /* Verde Tailwind: green-500 */
+  }
+  button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Asegúrate de que estas clases están definidas en tu CSS */
+.bg-secondary {
+    background-color: #10b981; /* Verde Tailwind: green-500 */
+}
+
+.bg-accent {
+    background-color: #e5f6e5; /* Un color más claro para el fondo de los acentos */
+}
+
+.text-secondary-foreground {
+    color: white; /* Color de texto para el botón */
+}
+
+.text-muted-foreground {
+    color: #6b7280; /* Un color gris para el texto desactivado */
+}
+
+.bg-card {
+    background-color: white; /* Fondo blanco para tarjetas */
+}
+
+.bg-background {
+    background-color: #f3f4f6; /* Fondo gris claro */
+}

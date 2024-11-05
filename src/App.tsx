@@ -1,7 +1,13 @@
-import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import { IonApp, IonRouterOutlet, setupIonicReact, IonSplitPane } from '@ionic/react';
+import { IonReactRouter,  } from '@ionic/react-router';
 import Home from './pages/Home';
+import Ejercicios from './pages/Ejercicios';
+import Contador from './pages/Contador';
+import Cardiaca from './pages/Cardiaca';
+import Postura from './pages/Postura';
+import Seguimiento from './pages/Seguimiento';
+import Menu from './pages/Menu';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -38,11 +44,44 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
+
+        <Menu />
+     
+
+
+
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path="/home">
           <Home />
         </Route>
+
+
+        <Route exact path="/Ejercicios">
+          <Ejercicios />
+        </Route>
+
+
+        <Route exact path="/Contador">
+          <Contador />
+        </Route>
+
+
+        <Route exact path="/Cardiaca">
+          <Cardiaca />
+        </Route>
+
+
+        <Route exact path="/Postura">
+          <Postura />
+        </Route>
+
+        <Route exact path="/Seguimiento">
+          <Seguimiento />
+        </Route>
+
+
+
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>
