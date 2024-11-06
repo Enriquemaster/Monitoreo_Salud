@@ -73,45 +73,57 @@ const Postura: React.FC = () => {
           id="main-content"
           className="ion-padding bg-gray-100 flex flex-col items-center justify-center h-auto w-full"
         >
+
+          <div className="flex items-center justify-center ">
           {/* Icono de Boy para giroscopio apagado */}
           {!gyroEnabled && (
+            <div className="flex items-center justify-center h-40 w-40 bg-gray-200 rounded-full">
+            <Boy color="disabled" sx={{ fontSize: 150 }} />
+            </div>
+          )}
+
+          {/* Icono de Boy para posición incorrecta */}
+          {gyroEnabled && postureMessage === 'Posición no tan correcta' && (
             <div className="flex items-center justify-center h-40 w-40 bg-gray-200 rounded-full mt-4">
-            <Boy color="disabled" sx={{ fontSize: 250 }} />
+            <Boy color="disabled" sx={{ fontSize: 150 }} />
             </div>
           )}
 
           {/* Icono de Boy para posición incorrecta */}
           {gyroEnabled && postureMessage === 'Posición incorrecta' && (
-            <div className="flex items-center justify-center h-40 w-40 bg-gray-200 rounded-full mt-4">
-            <Boy sx={{ fontSize: 250 }} />
+            <div className="flex items-center justify-center h-40 w-40 bg-gray-200 rounded-full">
+            <Boy sx={{ fontSize: 150 }} />
             </div>
           )}
 
           {/* Icono de Boy para posición correcta */}
           {gyroEnabled && postureMessage === 'Posición correcta' && (
-                <div className="flex items-center justify-center h-40 w-40 bg-gray-200 rounded-full mt-4">
-            <Boy color="success" sx={{ fontSize: 250 }} className='p-24'/>
+                <div className="flex items-center justify-center h-40 w-40 bg-gray-200 rounded-full">
+            <Boy color="success" sx={{ fontSize: 150 }}/>
             </div>
           )}
-
+          </div>
           <h1 className="mt-4 text-4xl font-bold text-green-500">Monitoreo de Postura</h1>
           <p className="mt-2 text-lg text-gray-700">
             Monitoreo de la postura mediante giroscopio y acelerómetro.
           </p>
 
-          {/* Mostrar mensaje de postura */}
-          <div className="mt-4 text-center">
+
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-4 px-4 bg-background">
+        <div className="col-span-1 md:col-span-5 bg-card p-4 rounded-lg shadow-md bg-[#10b981]">
             <p className="text-2xl font-semibold">{postureMessage}</p>
           </div>
 
           {/* Mostrar datos de aceleración */}
           {acceleration && (
-            <div className="mt-4 text-center">
+            <div className="col-span-1 md:col-span-7 bg-card p-4 rounded-lg shadow-md bg-[#d5d153]">
               <p>Movimiento en X: {acceleration.x?.toFixed(2)}</p>
               <p>Movimiento en Y: {acceleration.y?.toFixed(2)}</p>
               <p>Movimiento en Z: {acceleration.z?.toFixed(2)}</p>
             </div>
+         
           )}
+        </div>
         </IonContent>
       </IonPage>
     </IonApp>
