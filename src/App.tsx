@@ -8,6 +8,8 @@ import Cardiaca from './pages/Cardiaca';
 import Postura from './pages/Postura';
 import Seguimiento from './pages/Seguimiento';
 import Menu from './pages/Menu';
+import SeguimientoMapa from './pages/SeguimientoMapa';
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -16,6 +18,7 @@ import '@ionic/react/css/core.css';
 import '@ionic/react/css/normalize.css';
 import '@ionic/react/css/structure.css';
 import '@ionic/react/css/typography.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 /* Optional CSS utils that can be commented out */
 import '@ionic/react/css/padding.css';
@@ -46,6 +49,7 @@ const App: React.FC = () => (
   <IonApp>
 
         <Menu />
+    
      
 
 

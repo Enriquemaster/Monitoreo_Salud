@@ -1,38 +1,23 @@
-import { IonApp, IonContent, IonHeader, IonMenu, IonTitle, IonToolbar, IonList, IonItem, IonPage, IonMenuButton } from '@ionic/react';
-import Globe from "@/components/ui/globe";
-import HyperText from "@/components/ui/hyper-text";
-import RetroGrid from "@/components/ui/retro-grid"; 
-import { IonReactRouter } from '@ionic/react-router';
-import { Route } from 'react-router-dom';
-import './Home.css';
-import Menu from './Menu';
+import React from 'react';
+import { IonApp, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import SeguimientoMapa from './SeguimientoMapa'; // Asegúrate de que la ruta sea correcta
 
 const Seguimiento: React.FC = () => {
   return (
     <IonApp>
-      <Menu />  
-     
       <IonPage id="main-content">
         <IonHeader>
           <IonToolbar>
-            <IonMenuButton slot="start" className="custom-menu-button"  />
-            <IonTitle>Home</IonTitle>
+            <IonMenuButton slot="start" className="custom-menu-button" />
+            <IonTitle>Seguimiento de Rutas</IonTitle>
           </IonToolbar>
         </IonHeader>
-
-        <IonContent id="main-content" className="ion-padding bg-gray-100 flex flex-col items-center justify-center h-auto w-full">
-          <HyperText
-            className="text-4xl font-bold text-black dark:text-green-500"
-            text="Hyper Text"
-          />
-
-     
-          <h1 className="mt-4 text-4xl font-bold text-green-500">
-            ¡Seguimiento!
-          </h1>
-          <p className="mt-2 text-lg text-gray-700">
-            Este es un texto estilizado con Tailwind.
-          </p>
+        <IonContent className="ion-padding">
+          {/* Inserta el componente SeguimientoMapa para mostrar el mapa y la distancia recorrida */}
+          <h1 className="items-center justify-center flex mb-4 text-4xl font-bold transform transition duration-500 hover:scale-110 hover:text-yellow-400">
+  Tu Progreso
+</h1>
+          <SeguimientoMapa />
         </IonContent>
       </IonPage>
     </IonApp>
