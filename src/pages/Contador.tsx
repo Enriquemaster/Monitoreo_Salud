@@ -111,7 +111,7 @@ const Contador: React.FC = () => {
 
   // Cálculos adicionales
   const distanceTraveled = steps * STEP_LENGTH;
-  const caloriesBurned = steps * CALORIES_PER_STEP * userWeight;
+  const caloriesBurned = (distanceTraveled / 1000) * (userWeight * 0.57);
 
   return (
     <IonApp>
@@ -121,7 +121,7 @@ const Contador: React.FC = () => {
         <IonHeader>
           <IonToolbar className="border-b border-gray-200">
             <IonMenuButton slot="start" className="text-gray-600"/>
-            <IonTitle className="font-semibold text-gray-800">Fitness Tracker</IonTitle>
+            <IonTitle className="font-semibold text-gray-800">Seguimiento Calorías</IonTitle>
           </IonToolbar>
         </IonHeader>
 
@@ -188,7 +188,7 @@ const Contador: React.FC = () => {
             {/* Botón de Reset */}
             <button 
               onClick={resetData}
-              className="w-full bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-4 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2 shadow-sm"
+              className="w-full bg-green-500 hover:bg-red-600 text-white font-medium px-6 py-4 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2 shadow-sm"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />

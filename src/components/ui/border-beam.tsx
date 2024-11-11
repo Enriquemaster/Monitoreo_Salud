@@ -9,6 +9,7 @@ interface BorderBeamProps {
   colorFrom?: string;
   colorTo?: string;
   delay?: number;
+  children?: React.ReactNode;  // Agregar children aquí
 }
 
 export const BorderBeam = ({

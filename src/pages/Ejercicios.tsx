@@ -110,7 +110,7 @@ const Ejercicios: React.FC = () => {
 
         <IonContent className="ion-padding bg-background text-primary-foreground min-h-screen">
           {!isCameraActive && (
-            <button className="mt-4 w-full text-white p-2 rounded transition duration-300 bg-[#9aa30d]" onClick={handleEvidencias}>
+            <button className="mt-4 w-full text-white p-2 rounded transition duration-300  bg-green-500" onClick={handleEvidencias}>
               <IonIcon slot="start" icon={close} /> Iniciar Grabación
             </button>
           )}

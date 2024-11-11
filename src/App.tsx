@@ -4,7 +4,7 @@ import { IonReactRouter,  } from '@ionic/react-router';
 import Home from './pages/Home';
 import Ejercicios from './pages/Ejercicios';
 import Contador from './pages/Contador';
-import Cardiaca from './pages/Cardiaca';
+import Cardiaca from './pages/Cargando';
 import Postura from './pages/Postura';
 import Seguimiento from './pages/Seguimiento';
 import Menu from './pages/Menu';
@@ -87,7 +87,7 @@ const App: React.FC = () => (
 
 
         <Route exact path="/">
-          <Redirect to="/home" />
+          <Redirect to="/cardiaca" />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
