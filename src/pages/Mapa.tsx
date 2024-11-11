@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { GoogleMap, LoadScript, Marker, Polyline } from '@react-google-maps/api';
 
 type LatLng = {
@@ -19,7 +19,9 @@ const Mapa: React.FC<GoogleMapComponentProps> = ({ onMapClick, markers, initialC
     height: '400px',
     width: '100%',
   };
+  const [nearbyPlaceImage, setNearbyPlaceImage] = useState<string | null>(null);
 
+  
   return (
     <LoadScript googleMapsApiKey="AIzaSyA4cPEyP6494N4TwKwJ6HKzl55iecYIsVw">
       <GoogleMap
@@ -42,6 +44,7 @@ const Mapa: React.FC<GoogleMapComponentProps> = ({ onMapClick, markers, initialC
           }}
         />
       </GoogleMap>
+
     </LoadScript>
   );
 };

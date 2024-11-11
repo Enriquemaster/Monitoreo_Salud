@@ -7,8 +7,15 @@ import RetroGrid from "@/components/ui/retro-grid";
 import Menu from './Menu'; 
 import DeleteIcon from '@mui/icons-material/Delete';
 import './Home.css';
+import Mapa1 from './Mapa1';
 
 const Home: React.FC = () => {
+
+  const initialCenter = { lat: 19.432608, lng: -99.133209 };
+
+
+
+
   return (
     <IonApp>
       <Menu /> 
@@ -30,11 +37,7 @@ const Home: React.FC = () => {
 
             <div className="col-span-1 md:col-span-7 bg-card p-4 rounded-lg shadow-md bg-[#d5d153]">
               <h3 className="text-xl font-bold">Visualización de rutas</h3>
-              <p className="mt-2">
-                DeviceTotal is an up-and-coming post-seed cybersecurity startup, backed by market-leading investors. Our technology predicts, and prioritizes vulnerabilities found on IoT devices and provides
-                recommendations for managing and mitigating the threat of connected devices. 3+ years of experience in Python programming.
-              </p>
-              <button className="mt-4 bg-secondary text-white bg-[#10b981] hover:bg-green-600 p-2 rounded transition duration-300">Get started</button>
+              <Mapa1 initialCenter={initialCenter} />
             </div>
           </div>
 
